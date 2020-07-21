@@ -1,0 +1,95 @@
+<p>add-listing works!</p>
+
+<div class="listing-container">
+    <div class="listing-pics-container">
+      <h2>Add Images</h2>
+      <div class="listing-pics">
+        <div class="cards">
+          <div *ngFor="let image of uploadedImages;" class="card">
+            <!-- <div [hidden]="selectedFile==null" class="card"> -->
+            <img src={{image}} alt="" class="card_image">
+            <div class="card_content">
+              <button class="btn btn-danger">Delete</button>
+            </div>
+          </div>
+          <div class="card add-image-card">
+            <i class="far fa-plus-square fa-7x"></i>
+              <p>Add Image</p>
+              <input type="file" (change)="onFileSelected($event)">
+          </div>
+          <button (click)="addListing()">listings</button>
+          <div *ngFor="let post of posts | async">
+            {{post | json}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="listing-data">
+      <form>
+        <div class="form-group">
+          <label for="InputBreed">Breed: {{breed}}</label>
+          <input [(ngModel)]="breed" name="breed" class="form-control" id="InputBreed" placeholder="Enter Breed">
+        </div>
+        <div class="form-group">
+          <div class="dropdown">
+            <button class="btn btn-secondary" (click)="getBreedingDogs()">get dogs</button>
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <h1>Selecting object</h1>
+            <select type="number" [(ngModel)]="selectedLevel" name="name" (ngModelChange)="selChange($event)">
+              <option *ngFor="let level of breedingDogs " [ngValue]="level">{{level.name}}jjj</option>
+            </select>
+            {{selectedLevel | json}}
+            <h4>{{selectedFather | json}} ----- {{selectedMother | json}}</h4>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" *ngFor="let dogs of breedingDogs">
+              <a class="dropdown-item" href="#">{{dogs.name}}</a>
+            </div>
+            <select type="number" [(ngModel)]="selectedFather" name="name2" (ngModelChange)="selChange($event)">
+              <option *ngFor="let dog of breedingDogs" [ngValue]="dog">{{dog.name}}</option>
+            </select>
+            <select type="number" [(ngModel)]="selectedMother" name="name3" (ngModelChange)="selChange($event)">
+              <option *ngFor="let dog of breedingDogs" [ngValue]="dog">{{dog.name}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="InputLitter">Litter</label>
+          <input [(ngModel)]="litter" name="litter" class="form-control" id="InputLitter" placeholder="Sheepdog">
+        </div>
+        <div class="form-group">
+          <label for="InputBorn">Born</label>
+          <input [(ngModel)]="born" name="born" class="form-control" id="InputBorn" placeholder="3/2/2020">
+        </div>
+        <div class="form-group">
+          <label for="InputGoHome">Go Home</label>
+          <input [(ngModel)]="goHome" name="goHome" class="form-control" id="InputGoHome" placeholder="5/23/2020">
+        </div>
+        <div class="form-group">
+          <label for="InputGender">Gender</label>
+          <input [(ngModel)]="gender" name="gender" class="form-control" id="InputGender" placeholder="Male">
+        </div>
+        <div class="form-group">
+          <label for="InputWeight">Est Weight</label>
+          <input [(ngModel)]="weight" name="weight" class="form-control" id="InputWeight" placeholder="30 lbs">
+        </div>
+        <div class="form-group">
+          <label for="InputDeposit">Deposit</label>
+          <input [(ngModel)]="deposit" name="deposit" class="form-control" id="InputDeposit" placeholder="$200">
+        </div>
+        <div class="form-group">
+          <label for="InputPrice">Total Price</label>
+          <input [(ngModel)]="price" name="price" class="form-control" id="InputPrice" placeholder="$2000">
+        </div>
+        <div class="form-group">
+          <label for="InputDescription">Description</label>
+          <textarea [(ngModel)]="description" name="description" class="form-control" id="InputDescription" placeholder="write description here..." ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="InputHealth">Health</label>
+          <textarea [(ngModel)]="health" name="health" class="form-control" id="InputHealth" placeholder="write health info here..." ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="getBreedingDogs()">Submit</button>
+      </form>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+.listing-container {
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  background-color: blue;
+}
+
+.listing-pics {
+  flex: 1;
+  background-color: cadetblue;
+  display: flex;
+  border-top: 4px solid #0095b0;
+}
+.listing-data {
+  flex: 1;
+  background-color: cyan;
+}
+
+.cards {
+  background-color: darkgoldenrod;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.card {
+  height: 230px;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  background-color: #efefef;
+  color: #010101;
+  border-radius: 0.2rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.add-image-card {
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card img {
+  height: 200px;
+}

@@ -1,0 +1,122 @@
+<div class="hero-image">
+  <div class="hero-text">
+    <h1 style="font-size:50px">K9 Crown</h1>
+    <p>We specialize in raising happy, healthy, and hypoallergenic Borderdoodle and Sheepadoodle puppies.</p>
+  </div>
+</div>
+
+
+<div class="litter-strip off-strip">
+  <h2>Current Litter and Puppies</h2>
+
+  <div class="cards">
+    <a routerLink="/listing">
+    <div *ngFor="let litter of litters" class="card">
+      <img src="../../assets/ruby-sit.jpeg" alt="" class="card_image">
+      <div class="card_content">
+        <div class="card_title">
+          <p>{{litter.breed}}</p>
+        </div>
+        <p>Litter Due - {{litter.born}}</p>
+        <hr>
+        <div class="card_info">
+          <div>Verl Grant - UT, 84119</div>
+        </div>
+      </div>
+    </div>
+    </a>
+
+  </div>
+
+</div>
+
+
+<div class="two-strip">
+
+  <div class="side-strip">
+    <div class="about-dog-content">
+      <h1>About Borderdoodles</h1>
+      <p>The bordoodle, also know as “borderdoodle”, is a hybrid cross between the two smartest dogs in the world,
+        a purebred  Border Collie #1 and a purebred Poodle #2. The average Bordoodle has a shoulder height of 18-20 inches and typically weighs 35-45 lbs.
+        However, Mini Borderdoodles can be much smaller with a height of 15-22 inches and a weight from 25-35 lbs.
+        </p>
+    </div>
+  </div>
+
+  <div class="side-strip">
+    <img class="strip-image" src="../../assets/border-doodle.jpg" alt="borderdoodle with curly hair">
+  </div>
+
+</div>
+
+<div class="two-strip off-strip about-us-strip">
+
+  <div class="side-strip">
+    <img class="strip-image" src="../../assets/verl-and-archi.jpg" alt="verl and archi borderdoodle">
+  </div>
+
+  <div class="side-strip">
+    <div class="about-us-content">
+      <h1>About Us</h1>
+      <p>We are a team of people who strive to raise our puppies to become the healthiest,
+        smartest and most fun companions they can be. We put many hours into cleaning our facility
+         to ensure that the puppies will be raised in a healthy environment. Ray and I are brothers
+          who work together along with a team of people to ensure that this business is handled professionally.
+          We love everything there is about dog breeding: the pedigrees and genetic studying, training, and
+          of course the cute little puppies themselves. We guarantee that you will fall in love with these adorable little furballs.
+          Our program allows a great amount of flexibility to those who have placed a deposit with K9 Crown because we offer a fully refundable deposit.
+          Your deposit can be refunded at any time for any reason so you can feel comfortable letting us hold one of our amazing puppies for you.
+        </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="past-litter-container">
+  <div class="past-litter-header">
+    <h1>Our Past Litters/Puppies</h1>
+  </div>
+  <div class="past-litter-strip">
+    <div class="past-litter-strip-side">
+      <img src="../../assets/borderdoodle-past-litter-1.jpeg" alt="">
+    </div>
+    <div class="past-litter-strip-side">
+      <img src="../../assets/borderdoodle-past-litter-2.jpeg" alt="">
+    </div>
+  </div>
+ <div class="past-litter-strip">
+    <div class="past-litter-strip-side">
+      <img src="../../assets/borderdoodle-past-litter-3.jpeg" alt="">
+    </div>
+    <div class="past-litter-strip-side">
+      <img src="../../assets/borderdoodle-past-litter-4.jpeg" alt="">
+    </div>
+  </div>
+</div>
+
+
+
+<div class="two-strip contact-us-strip">
+  <div class="side-strip">
+    <div class="contact-us-content">
+      <h1>Adopt A Puppy</h1>
+      <p>We take pride in our program and want only the best for each of our puppies.
+        We keep all of our puppies up to date on vaccines and give them plenty of socialization before they go home.
+        If you are interested in a listing and ready for a loving companion contact us at (801)-884-7446.
+      We will then put you on our waiting list and give updates on your chosen puppy. </p>
+    </div>
+  </div>
+
+  <div class="side-strip">
+    <div class="contact-us-content">
+      <h1>Contact Us</h1>
+      <ul class="fa-ul">
+        <li><span class="fa-li"><i class="fas fa-phone-square-alt"></i></span>(801)884-7446</li>
+        <li><span class="fa-li"><i class="far fa-envelope"></i></span>raygrant36@gmail.com</li>
+        <li><span class="fa-li"><i class="far fa-envelope"></i></span>verlgrant8@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
